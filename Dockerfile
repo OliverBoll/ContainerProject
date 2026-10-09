@@ -12,7 +12,7 @@ COPY --from=build /app/published-app /app
 EXPOSE 5000
 ENV ASPNETCORE_HTTP_PORTS=5000
 
-RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser
+RUN adduser -u 5678 -D appuser && chown -R appuser /app
 USER appuser
 
 ENTRYPOINT ["dotnet", "IBASEmployeeService.dll"]
