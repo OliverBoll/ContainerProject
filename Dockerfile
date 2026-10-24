@@ -15,4 +15,4 @@ ENV ASPNETCORE_HTTP_PORTS=5000
 RUN adduser -u 5678 -D appuser && chown -R appuser /app
 USER appuser
 
-ENTRYPOINT ["dotnet", "IBASEmployeeService.dll"]
+ENTRYPOINT ["dotnet", "ContainerProject.dll"]
